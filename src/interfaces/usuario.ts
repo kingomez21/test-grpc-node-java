@@ -1,11 +1,13 @@
 // Original file: protointerfaces/schema/src/main/proto/usuario.proto
 
+import type { Long } from '@grpc/proto-loader';
 
 export interface Usuario {
   'firstname'?: (string);
   'lastname'?: (string);
   'email'?: (string);
   'address'?: (string);
+  'id'?: (number | string | Long);
 }
 
 export interface Usuario__Output {
@@ -13,15 +15,5 @@ export interface Usuario__Output {
   'lastname'?: (string);
   'email'?: (string);
   'address'?: (string);
+  'id'?: (Long);
 }
-= {
-  new(...args: ConstructorParameters<Constructor>): Subtype;
-};
-
-export interface ProtoGrpcType {
-  Empty: MessageTypeDefinition
-  ServiceUsuario: SubtypeConstructor<typeof grpc.Client, _ServiceUsuarioClient> & { service: _ServiceUsuarioDefinition }
-  Usuario: MessageTypeDefinition
-  Usuarios: MessageTypeDefinition
-}
-

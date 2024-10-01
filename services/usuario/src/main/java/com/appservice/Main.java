@@ -15,13 +15,9 @@ public class Main {
                 .addService(new ServiceUsuario())
                 .build();;
         try {
-            server = 
-            
             server.start();
             System.out.println("server on port 50051");
             server.awaitTermination();
-            
-
         } catch (InterruptedException e) {
             server.shutdown();
             System.err.println("server shutdown");

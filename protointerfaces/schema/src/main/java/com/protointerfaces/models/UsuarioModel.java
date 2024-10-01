@@ -2,16 +2,18 @@ package com.protointerfaces.models;
 
 public class UsuarioModel {
     
+    private int id;
     private String firstname;
     private String lastname;
     private String email;
     private String address;
 
-    public UsuarioModel(String firstname, String lastname, String email, String address) {
+    public UsuarioModel(int id, String firstname, String lastname, String email, String address) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
         this.address = address;
+        this.id = id;
     }
 
     public String getFirstname() {
@@ -44,5 +46,13 @@ public class UsuarioModel {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
